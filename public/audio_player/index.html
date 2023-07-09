@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0f2e37f433.js" crossorigin="anonymous"></script>
+    <title>Music Player | LF Graphics</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="musicPlayer">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left" style="color: #ffe0e5;"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars" style="color: #ffe0e5;"></i>
+                </div>
+            </nav>
+            <img src="media/tumbnail.png" id="songImg">
+            <h1 id="songName">Despasito</h1>
+            <p id="singerWriter">Luis Fonsi Ft. Puerto Rican</p>
+
+            <audio controls>
+                <source src="media/Go-NEFFEX.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" id="progress" value="0">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

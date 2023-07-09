@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Strong Password Generator | LF Graphics</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a<br><span>Really Strong Password</span></h1>
+        <div class="display">
+            <input type="text" readonly id="Password" placeholder="Password">
+            <hr>
+            <input type="number" min="8" max="60" id="length" placeholder="length" onblur="validateLength()">
+            <img src="images/copy.png" alt="Copy Icon" id="copy">
+        </div>
+        <button id="generate"><img id="copy" src="images/generate.png" alt="generate Icon">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

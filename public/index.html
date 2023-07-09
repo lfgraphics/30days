@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Poppins';
+        }
+    </style>
+    <title>30 Days challange</title>
+</head>
+
+<body>
+    <nav>
+        <ol id="folders">
+            All Folders
+        </ol>
+    </nav>
+    <script>
+        // Make a fetch request to the server to get the data
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                // Get the container element where the links will be rendered
+                const container = document.getElementById('folders');
+
+                // Generate the <a> tags and append them to the container
+                data.links.forEach((link, index) => {
+                    let a = document.createElement('a');
+                    a.href = link.link;
+                    a.textContent = modifyFolderName(link.folderName); // Modify the folder name as per your requirements
+
+                    // let span = document.createElement('span');
+                    // span.innerHTML = ` ${index + 1}  `;
+
+                    let li = document.createElement('li');
+                    // li.appendChild(span);
+                    li.appendChild(a);
+
+                    container.appendChild(li);
+                });
+
+                // console.log(data)
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        // Modify the folder name as per your requirements
+        function modifyFolderName(folderName) {
+            // Split the folder name by underscores
+            const words = folderName.split('_');
+
+            // Capitalize the first letter of each word and join them with a space
+            const modifiedFolderName = words.map(word => {
+                // Capitalize the first letter of the word
+                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            }).join(' ');
+
+            return modifiedFolderName;
+        }
+    </script>
+</body>
+
+</html>
