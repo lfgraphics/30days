@@ -11,23 +11,43 @@
 
 <body>
     <div class="container">
-        <div class="musicPlayer">
+        <div class="musicPlayer" id="musicPlayer">
             <nav>
                 <div class="circle">
-                    <i class="fa-solid fa-angle-left" style="color: #ffe0e5;"></i>
+                    <i class="fa-solid fa-angle-left" style="color: var(--main-color);"></i>
                 </div>
                 <div class="circle">
-                    <i class="fa-solid fa-bars" style="color: #ffe0e5;"></i>
+                    <i class="fa-solid fa-bars" style="color: var(--main-color);"></i>
                 </div>
             </nav>
-            <img src="media/tumbnail.png" id="songImg">
-            <h1 id="songName">Despasito</h1>
-            <p id="singerWriter">Luis Fonsi Ft. Puerto Rican</p>
+            <div class="content">
+                <img src="media/Yalgaar.jpg" id="songImg">
+                <h1 id="songName">YALGAAR</h1>
+                <br>
+                <p id="singerWriter">CARRYMINATI X Wily Frenzy</p>
 
-            <audio controls>
-                <source src="media/Go-NEFFEX.mp3" type="audio/mpeg">
-            </audio>
-            <input type="range" id="progress" value="0">
+                <audio id="song">
+                    <source src="media/YALGAAR - CARRYMINATI X Wily Frenzy.mp3" type="audio/mpeg">
+                </audio>
+
+                <input type="range" id="progress" value="0">
+                <div class="timing">
+                    <p id="crntTime">0:00</p>
+                    <p id="duration">0:00</p>
+                </div>
+
+                <div class="controls">
+                    <div onclick="changeSong(-1)">
+                        <i class="fa-solid fa-backward" style="color: var(--main-color);"></i>
+                    </div>
+                    <div onclick="playPause()">
+                        <i class="fa-solid fa-play" style="color: #fff;" id="ctrlIcon"></i>
+                    </div>
+                    <div onclick="changeSong(1)">
+                        <i class="fa-solid fa-forward" style="color: var(--main-color);"></i>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

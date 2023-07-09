@@ -23,20 +23,14 @@
         fetch('/data')
             .then(response => response.json())
             .then(data => {
-                // Get the container element where the links will be rendered
                 const container = document.getElementById('folders');
 
-                // Generate the <a> tags and append them to the container
-                data.links.forEach((link, index) => {
+                data.links.forEach((link) => {
                     let a = document.createElement('a');
                     a.href = link.link;
-                    a.textContent = modifyFolderName(link.folderName); // Modify the folder name as per your requirements
-
-                    // let span = document.createElement('span');
-                    // span.innerHTML = ` ${index + 1}  `;
+                    a.textContent = modifyFolderName(link.folderName);
 
                     let li = document.createElement('li');
-                    // li.appendChild(span);
                     li.appendChild(a);
 
                     container.appendChild(li);

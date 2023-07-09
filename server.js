@@ -24,10 +24,9 @@ app.get('/data', (req, res) => {
     );
 
     // Create an array of objects with folder name, link, and index
-    const links = directories.map((directory, index) => ({
+    const links = directories.map((directory) => ({
       folderName: directory,
       link: `/${directory.toLowerCase()}`,
-      index: index,
     }));
 
     // Send the links data as JSON response
@@ -42,7 +41,7 @@ app.get('/', (req, res) => {
   res.sendFile(indexPath);
 });
 
-// Start the server
+// Start the server (using port 80 to only use ip in the url and it'll redirecct to the default port 80 and serve the index.html page and that page will fetch data from this file and return it into the #container)
 const port = 80;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
