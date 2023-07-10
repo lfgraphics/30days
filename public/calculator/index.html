@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> -->
+    <title>Calculator | LF Graphics</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" name="display" value="" readonly>
+                </div>
+                <p id="result" style="color: gray;"></p>
+                <div>
+                    <input type="button" value="AC" id="clear">
+                    <input type="button" value="DE" id="remove1">
+                    <input type="button" class="operator" value=".">
+                    <input type="button" class="operator" value="/">
+                </div>
+                <div>
+                    <input type="button" class="num" value="7">
+                    <input type="button" class="num" value="8">
+                    <input type="button" class="num" value="9">
+                    <input type="button" class="operator" value="*">
+                </div>
+                <div>
+                    <input type="button" class="num" value="4">
+                    <input type="button" class="num" value="5">
+                    <input type="button" class="num" value="6">
+                    <input type="button" class="operator" value="-">
+                </div>
+                <div>
+                    <input type="button" class="num" value="1">
+                    <input type="button" class="num" value="2">
+                    <input type="button" class="num" value="3">
+                    <input type="button" class="operator" value="+">
+                </div>
+                <div>
+                    <input type="button" class="num" value="00">
+                    <input type="button" class="num" value="0">
+                    <!-- <input type="button" value="+"> -->
+                    <input type="button" value="=" id="equal">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
