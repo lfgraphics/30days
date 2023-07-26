@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.strength-meter {
+    height: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.strength-message {
+    font-weight: bold;
+}
+
+.strength-weak {
+    background-color: #ff6347;
+    /* Tomato Red */
+}
+
+.strength-moderate {
+    background-color: #ffa500;
+    /* Orange */
+}
+
+.strength-strong {
+    background-color: #32cd32;
+    /* Lime Green */
+}

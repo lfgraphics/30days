@@ -23,17 +23,39 @@ const createPassword = () => {
         const number = '0123456789';
         const symbol = '!@#$%^&*()_+~|{}[]<>/-=?:;"`';
         let password = '';
-        const digitsLength = Math.floor(length / 3);
-        const lettersLength = Math.floor(length / 3) * 2;
-        const symbolsLength = length - digitsLength - lettersLength;
-        for (let i = 0; i < digitsLength; i++) password += number[Math.floor(Math.random() * number.length)];
+
+        // Calculate the number of symbols to include in the password
+        const symbolsLength = Math.floor(length / 4);
+
+        // Calculate the number of digits to include in the password
+        const digitsLength = Math.floor(length / 4);
+
+        // Calculate the number of letters to include in the password (remaining characters)
+        const lettersLength = length - symbolsLength - digitsLength;
+
+        // Add digits to the password
+        for (let i = 0; i < digitsLength; i++) {
+            password += number[Math.floor(Math.random() * number.length)];
+        }
+
+        // Add letters to the password
         const letters = upperCase + lowerCase;
-        for (let i = 0; i < lettersLength; i++) password += letters[Math.floor(Math.random() * letters.length)];
-        for (let i = 0; i < symbolsLength; i++) password += symbol[Math.floor(Math.random() * symbol.length)];
+        for (let i = 0; i < lettersLength; i++) {
+            password += letters[Math.floor(Math.random() * letters.length)];
+        }
+
+        // Add symbols to the password
+        for (let i = 0; i < symbolsLength; i++) {
+            password += symbol[Math.floor(Math.random() * symbol.length)];
+        }
+
+        // Shuffle the password
         password = password.split('').sort(() => Math.random() - 0.5).join('');
+
         document.getElementById('Password').value = password;
     }
 };
+
 
 const Copy = () => {
     if (pasBox.value === null || pasBox.value === '') {

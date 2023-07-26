@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - Easy Tutorials YouTube Channel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="nameErr"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phoneErr"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="mailErr"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Your Message</label>
+                <textarea rows="5" placeholder="Enter your message" id="contact-msg" onkeyup="validateMsg()"></textarea>
+                <span id="msgErr"></span>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submitErr"></span>
+
+        </form>
+
+
+        <div class="useful-links" style="display: nonea;">
+            <a href="https://youtu.be/fz8bwvn9lA4">Watch Video</a>
+            <a href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1">Visit Channel</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
