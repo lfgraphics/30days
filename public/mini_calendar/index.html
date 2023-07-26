@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Current Date Display</title>
+    <style>
+        body {
+            font-family: 'poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 400px;
+            height: 350px;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            /* padding: 20px; */
+            border-radius: 20px;
+        }
+
+        .left-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #c8f0c8;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .right-side span{
+            font-size: 40px;
+        }
+
+        .date {
+            font-size: 60px;
+        }
+
+        .day {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <span class="date" id="currentDate"></span>
+            <span class="day" id="currentDay"></span>
+        </div>
+        <div class="right-side">
+            <span class="" id="currentMonth"></span>
+            <span class="" id="currentYear"></span>
+        </div>
+    </div>
+
+    <script>
+        function updateDateDisplay() {
+            const currentDate = new Date();
+            const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+
+            document.getElementById('currentDate').textContent = currentDate.toLocaleDateString(undefined, { day: 'numeric' });
+            document.getElementById('currentDay').textContent = currentDate.toLocaleDateString(undefined, { weekday: 'long' });
+
+            const monthYear = currentDate.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+            const [month, year] = monthYear.split(" ");
+            document.getElementById('currentMonth').textContent = month;
+            document.getElementById('currentYear').textContent = year;
+        }
+
+        // Update the date display on page load
+        updateDateDisplay();
+    </script>
+</body>
+
+</html>
