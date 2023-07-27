@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #030000;
+}
+
+#selector {
+    width: 350px;
+    display: grid;
+    place-items: center;
+}
+
+.visit {
+    margin-bottom: 15px;
+    padding: 0.5em;
+    font-size: 1rem;
+    width: 120px;
+}
+
+#selectField {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#selectField i {
+    width: 12px;
+    transition: all 0.5s;
+}
+
+#list {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.options {
+    width: 100%;
+    padding: 15px 0 15px 70px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.options i {
+    font-size: 25px;
+    position: absolute;
+    top: 12px;
+    left: 25px;
+}
+
+.options:hover {
+    background-color: #fff;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
