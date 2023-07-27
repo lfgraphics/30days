@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff99cc, #66ccff);
+    font-family: 'poppins', sans-serif;
+}
+
+.clock-container {
+    position: relative;
+    width: 75%;
+    max-width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(235, 0, 255, 0.11);
+    /* Adjust the opacity to your liking */
+    backdrop-filter: blur(40px);
+    /* Adjust the blur strength as needed */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Optional: Add a semi-transparent border to enhance the glassy effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clock-container::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #f41b75;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    position: absolute;
+    z-index: -3;
+}
+.clock-container::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right:  -30px;
+    bottom: -30px;
+    position: absolute;
+    z-index: -3;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.labels span {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+}
+
+.square-element {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    z-index: -99
+}
+
+.circle-element {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    z-index: -99;
+}
+
+.clock {
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 5px; */
+}
+
+.labels span {
+    font-size: 14px;
+    color: #666;
+}
+
+#ampm {
+    font-size: 16px;
+    position: absolute;
+    right: 22px;
+    bottom: 81px;
+}
