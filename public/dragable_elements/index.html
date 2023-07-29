@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag & Drop | LF Graphics</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+
+        <div id="left">
+            <div class="list" draggable="true">
+                <img src="icon.png" alt="Icon"> List Item 1
+            </div>
+            <div class="list" draggable="true">
+                <img src="icon.png" alt="Icon"> List Item 2
+            </div>
+            <div class="list" draggable="true">
+                <img src="icon.png" alt="Icon"> List Item 3
+            </div>
+            <div class="list" draggable="true">
+                <img src="icon.png" alt="Icon"> List Item 4
+            </div>
+        </div>
+        <div id="right"></div>
+
+    </div>
+
+    <script>
+
+        let lists = document.getElementsByClassName('list');
+        let leftBox = document.getElementById('left');
+        let righttBox = document.getElementById('right');
+
+        for (list of lists) {
+            list.addEventListener('dragstart', function (e) {
+                let selected = e.target;
+                righttBox.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                });
+                righttBox.addEventListener('drop', function (e) {
+                    righttBox.appendChild(selected);
+                    selected = null;
+                });
+                leftBox.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                });
+                leftBox.addEventListener('drop', function (e) {
+                    leftBox.appendChild(selected);
+                    selected = null;
+                });
+            })
+        }
+
+
+        
+        // window.addEventListener('beforeunload', function () {
+        //     updateStorage();
+        // });
+
+        // function updateData() {
+        //     let boxData = document.getElementById('container').innerHTML;
+        //     localStorage.setItem('boxData', boxData);
+        // }
+
+        // window.addEventListener('load', function () {
+        //     if (localStorage.getItem('boxData')) {
+        //         document.getElementById('container').innerHTML = localStorage.getItem('boxData');
+        //     }
+        // });
+
+    </script>
+
+</body>
+
+</html>
