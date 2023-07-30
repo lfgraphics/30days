@@ -19,7 +19,7 @@ During this 30-day task, I gained valuable knowledge and skills in the following
 
 - Using some new methods in js, and debugging issues.
 - In too many pages I tried to make them on my own and in some projects I made same and added some extra features to learn more and explore more and in some pages I'll make some big changes later.
-- My all time faviiorite page of this project was tha [Quote Generator](/30days/quotes) which looks good and after some extra features it looks more good.
+- My all time faviiorite page of this project was tha [Quote Generator](/quotes) which looks good and after some extra features it looks more good.
 
 This experience has been a tremendous learning opportunity for me, and I'm grateful to the GreatStack YouTube channel for inspiring me to take on this challenge.
 
