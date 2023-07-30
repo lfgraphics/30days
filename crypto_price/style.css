@@ -138,6 +138,7 @@ nav select {
     .coin {
         font-size: 14px;
         padding: 5px 10px;
+        bottom: 10px;
     }
 
     .coin div {
