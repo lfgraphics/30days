@@ -26,6 +26,8 @@ nav ol p{
     /* list-style-type: none; */
     margin: 0;
     padding: 0;
+    margin-right: 10px;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
