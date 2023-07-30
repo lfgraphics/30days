@@ -1,47 +1,71 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Poppins';
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <title>30 Days challange</title>
 </head>
 
 <body>
     <nav>
         <ol id="folders">
-            All Folders
+            <p>
+                All Projects
+            </p>
+
         </ol>
     </nav>
     <script>
-        // Make a fetch request to the server to get the data
-        fetch('/data')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('folders');
+        const sampleData = {
+            links: [
+                { link: "/age_calculator", folderName: "age_calculator" },
+                { link: "/audio_player", folderName: "audio_player" },
+                { link: "/calculator", folderName: "calculator" },
+                { link: "/coming_soon", folderName: "coming_soon" },
+                { link: "/crypto_price", folderName: "crypto_price" },
+                { link: "/custom_select", folderName: "custom_select" },
+                { link: "/dark_mode", folderName: "dark_mode" },
+                { link: "/digital_clock", folderName: "digital_clock" },
+                { link: "/dragable_elements", folderName: "dragable_elements" },
+                { link: "/email_subscription", folderName: "email_subscription" },
+                { link: "/form_validation", folderName: "form_validation" },
+                { link: "/horizontal_slider", folderName: "horizontal_slider" },
+                { link: "/image_background_change", folderName: "image_background_change" },
+                { link: "/image_gallery", folderName: "image_gallery" },
+                { link: "/mini_calendar", folderName: "mini_calendar" },
+                { link: "/notes", folderName: "notes" },
+                { link: "/password_generator", folderName: "password_generator" },
+                { link: "/password_strength_indicator", folderName: "password_strength_indicator" },
+                { link: "/popup", folderName: "popup" },
+                { link: "/product_page", folderName: "product_page" },
+                { link: "/progress_bar", folderName: "progress_bar" },
+                { link: "/qr_code_generator", folderName: "qr_code_generator" },
+                { link: "/quiz", folderName: "quiz" },
+                { link: "/quotes", folderName: "quotes" },
+                { link: "/snack_bar", folderName: "snack_bar" },
+                { link: "/stop_watch", folderName: "stop_watch" },
+                { link: "/text_to_speech_converter", folderName: "text_to_speech_converter" },
+                { link: "/todo", folderName: "todo" },
+                { link: "/toggle_password", folderName: "toggle_password" },
+                { link: "/weather", folderName: "weather" },
+            ]
+        };
 
-                data.links.forEach((link) => {
-                    let a = document.createElement('a');
-                    a.href = link.link;
-                    a.textContent = modifyFolderName(link.folderName);
+        function appendLinksToNav(data) {
+            const container = document.getElementById('folders');
 
-                    let li = document.createElement('li');
-                    li.appendChild(a);
+            data.links.forEach((link) => {
+                let a = document.createElement('a');
+                a.href = link.link;
+                a.textContent = modifyFolderName(link.folderName);
 
-                    container.appendChild(li);
-                });
+                let li = document.createElement('li');
+                li.appendChild(a);
 
-                // console.log(data)
-
-            })
-            .catch(error => {
-                console.error('Error:', error);
+                container.appendChild(li);
             });
+        }
 
         // Modify the folder name as per your requirements
         function modifyFolderName(folderName) {
@@ -56,6 +80,9 @@
 
             return modifiedFolderName;
         }
+
+        // Call the function with the sample data
+        appendLinksToNav(sampleData);
     </script>
 </body>
 

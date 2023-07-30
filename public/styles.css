@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ol p{
+    color: #fff;
+    text-align: center;
+}
+
+#folders {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#folders li {
+    margin: 10px;
+}
+
+#folders li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#folders li a:hover {
+    background-color: #777;
+}
+
+/* Additional styles for the page title */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
