@@ -9,16 +9,23 @@ const loadingOverlay = document.getElementById("loading-overlay");
 
 
 async function getQuote(url) {
-    const response = await fetch(url);
-    var data = await response.json()
-    uiQuote.innerText = data.content;
-    uiAuthor.innerText = data.author;
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'X-Api-Key': 'LxRXBhHYO0FUj0wYwjGRlA==4KpJJ80yLZPzHLml',
+            'Content-Type': 'application/json'
+        }
+    });
+
+    const data = await response.json();
+    uiQuote.innerText = data[0].quote;
+    uiAuthor.innerText = data[0].author;
     loadingOverlay.style.display = "none";
 }
 
 
 window.addEventListener('load', function () {
-    getQuote(apiUrl)
+    getQuote(api2Url)
 })
 nextBtn.addEventListener('click', function () {
     checkNRun()
