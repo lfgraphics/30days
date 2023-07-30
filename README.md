@@ -1,5 +1,6 @@
 # 30 Days Task
 
+[UI Mode](/)
 <!--  ![Project Banner](link_to_project_banner.png) If you have a banner image, replace the link -->
 
 ## Introduction
@@ -36,7 +37,7 @@ If you have any questions, suggestions, or just want to connect, you can reach m
 
 - Taha Kazmi
 - lfgsbusinessmail@gmail.com
-- [github](https://lfgraphics.github.io/)
+- [Portfolio](https://lfgraphics.github.io/)
 
 Feel free to explore the individual project folders in this repository and have fun coding!
 
