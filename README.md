@@ -1,6 +1,6 @@
 # 30 Days Task
 
-[UI Mode](/)
+[UI Mode](index.html)
 <!--  ![Project Banner](link_to_project_banner.png) If you have a banner image, replace the link -->
 
 ## Introduction
