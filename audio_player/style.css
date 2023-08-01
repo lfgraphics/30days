@@ -48,6 +48,7 @@ nav .circle {
     background-color: var(--secondary-color);
     color: var(--main-color);
     box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
 }
 
 #songImg {
